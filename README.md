@@ -1,6 +1,6 @@
 # SanatanTime
 
-Java module for converting the currently used christian system time to historic and vedic sanatan system time.
+Java module for converting the currently used Christian System Time to historic and vedic Sanatan System Time.
 
 ## Concept
 
