@@ -74,7 +74,7 @@ So for that, there are 2 cases which need to be considered and the calculations 
 
     Hence, minutes_from_day_start = 45 - 30 = 15 minutes.
 
-Now here's the explanation of **number_of_hours()** function:
+Now here's the explanation of **number_of_hours(1st hour, 2nd hour)** function:
 
 So to calculate the number of hours between 2 hours, there are 2 cases which need to be considered and the calculations have to be done accordingly. The cases with explanation are as follows:
 
@@ -93,11 +93,18 @@ So to calculate the number of hours between 2 hours, there are 2 cases which nee
 
 - **Case 2: 1st hour is greater than 2nd hour**
 
-    In this case, since the day has started less than an hour ago, hence we will use this formula which is as follows:
+    In this case, since the new day has already started according to Current Time System, hence we will use this formula which is as follows:
 
-    **minutes_from_day_start = current_minutes - sun_rise_minutes**
+    **hours_difference = 24 - (1st hour - 2nd hour)**
 
-    Basically, these are the minutes passed after sun rise in sun_rise_hour.
+    - The expression **(1st hour - 2nd hour)** gives the number of hours remaining before the number of hours between 1st hour and 2nd hour is exactly equal to 24 hours (1 Day).
+
+    For eg. if 1st time is 3:30 AM and 2nd time is 1:30 AM, then:
+
+    - 1st hour = 3
+    - 2nd hour = 1
+
+    Hence, hours_difference = 24 - (3 - 1) = 24 - 2 = 22 hours.
 
 ## Installation
 
