@@ -44,21 +44,16 @@ So for that, there are 2 cases which need to be considered and the calculations 
 
     **minutes_from_day_start = (60 - sun_rise_minutes) + (number_of_hours(sun_rise_hour + 1, current_hour) x 60) + current_minutes**
 
-    The expression **(60 - sun_rise_minutes)** gives the minutes which were passed in the sun_rise_hour after the rise of the sun.
-    
-    The expression **(number_of_hours(sun_rise_hour + 1, current_hour) x 60)** gives the number of minutes passed between the hour after sun_rise_hour and the current_hour via function number_of_hours() which will be explained in detail below (60 is multiplied to number of hours to convert them into minutes passed).
-    
-    Then, **current_minutes** is added to the result of above expressions to add the number of minutes passed in the current_hour till the moment where time is being calculated.
+    - The expression **(60 - sun_rise_minutes)** gives the minutes which were passed in the sun_rise_hour after the rise of the sun.
+    - The expression **(number_of_hours(sun_rise_hour + 1, current_hour) x 60)** gives the number of minutes passed between the hour after sun_rise_hour and the current_hour via function number_of_hours() which will be explained in detail below (60 is multiplied to number of hours to convert them into minutes passed).
+    - Then, **current_minutes** is added to the result of above expressions to add the number of minutes passed in the current_hour till the moment where time is being calculated.
 
     For eg. if sun rises at 3:30 AM and we are calculating time at 6:40 AM, then:
 
-    sun_rise_hour = 3
-    
-    sun_rise_minutes = 30
-    
-    current_hour = 6
-
-    current_minutes = 40
+    - sun_rise_hour = 3
+    - sun_rise_minutes = 30
+    - current_hour = 6
+    - current_minutes = 40
 
     Hence, minutes_from_day_start = (60 - 30) + ((number_of_hours(3 + 1, 6) x 60) + 40 = 30 + (2 x 60) + 40 = 30 + 120 + 40 = 190 minutes.
 
@@ -72,13 +67,10 @@ So for that, there are 2 cases which need to be considered and the calculations 
 
     For eg. if sun rises at 3:30 AM and we are calculating time at 3:45 AM, then:
 
-    sun_rise_hour = 3
-    
-    sun_rise_minutes = 30
-    
-    current_hour = 3
-
-    current_minutes = 45
+    - sun_rise_hour = 3
+    - sun_rise_minutes = 30
+    - current_hour = 3
+    - current_minutes = 45
 
     Hence, minutes_from_day_start = 45 - 30 = 15 minutes.
 
@@ -94,9 +86,8 @@ So to calculate the number of hours between 2 hours, there are 2 cases which nee
 
     For eg. if 1st time is 3:30 AM and 2nd time is 6:30 AM, then:
 
-    1st hour = 3
-    
-    2nd hour = 6
+    - 1st hour = 3
+    - 2nd hour = 6
 
     Hence, hours_difference = 6 - 3 = 3 hours.
 
