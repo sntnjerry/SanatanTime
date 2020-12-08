@@ -32,6 +32,11 @@ So, first of all, here is the list of information which we have with us:
 - **sun_rise_minutes** = Number of minutes passed in sun_rise_hour after which the sun rises (Most likely 30 in majority of the world).
 - **current_hour** = The hour in which the time is being calculated.
 - **current_minutes** = Number of minutes passed in current_hour at the moment when time is being calculated.
+- **current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
+
+Now our first objective is to calculate minutes between the sun rise time and the current time.
+
+So for that, there are 2 cases which need to be considered and the calculations have to be done accordingly. The cases with explanation are as follows:
 
 
 
