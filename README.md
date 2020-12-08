@@ -28,10 +28,10 @@ Now, using the above relations, I have derived the mathematical formulas and mat
 
 So, first of all, here is the list of information which we have with us:
 
-- sun_rise_hour = The hour in which the sun rises (Most likely 3 in majority of the world).
-- sun_rise_minutes = Number of minutes passed in sun_rise_hour after which the sun rises (Most likely 30 in majority of the world).
-- current_hour = The hour in which the time is being calculated.
-- current_minutes = Number of minutes passed in current_hour at the moment when time is being calculated.
+- **sun_rise_hour** = The hour in which the sun rises (Most likely 3 in majority of the world).
+- **sun_rise_minutes** = Number of minutes passed in sun_rise_hour after which the sun rises (Most likely 30 in majority of the world).
+- **current_hour** = The hour in which the time is being calculated.
+- **current_minutes** = Number of minutes passed in current_hour at the moment when time is being calculated.
 
 
 
