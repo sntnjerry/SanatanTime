@@ -34,11 +34,29 @@ So, first of all, here is the list of information which we have with us:
 - **current_minutes** = Number of minutes passed in current_hour at the moment when time is being calculated.
 - **current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
 
-Now our first objective is to calculate minutes between the sun rise time and the current time.
+Now our first objective is to calculate number of minutes passed between the sun rise time and the current time.
 
 So for that, there are 2 cases which need to be considered and the calculations have to be done accordingly. The cases with explanation are as follows:
 
+- **Case 1: current_hour is not equal to sun_rise_hour OR current_hour is equal to sun_rise_hour but current_minutes is less than sun_rise_minutes**
 
+    In this case, the formula which we will use is as follows:
+
+    **minutes_from_day_start = (60 - sun_rise_minutes) + (number_of_hours(sun_rise_hour + 1, current_hour) x 60) + current_minutes**
+
+    The expression **(60 - sun_rise_minutes)** gives the minutes which were passed in the sun_rise_hour after the rise of the sun.
+    The expression **(number_of_hours(sun_rise_hour + 1, current_hour) x 60)** gives the number of minutes passed between the hour after sun_rise_hour and the current_hour via function number_of_hours() which will be explained in detail below (60 is multiplied to number of hours to convert them into minutes passed).
+    Then, **current_minutes** is added to the result of above expressions to add the number of minutes passed in the current_hour till the moment where time is being calculated.
+
+- **Case 2: current_hour is equal to sun_rise_hour and current_minutes is equal to or greater than sun_rise_minutes**
+
+    In this case, since the day has started less than an hour ago, hence we will use this formula which is as follows:
+
+    **minutes_from_day_start = current_minutes - sun_rise_minutes**
+
+    Basically, these are the minutes passed after sun rise in sun_rise_hour.
+
+Now here's the explanation of number_of_hours() function:
 
 ## Installation
 
