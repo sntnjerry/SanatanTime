@@ -124,19 +124,45 @@ Since 1 Pal = 24 Seconds, hence to find total number of pals, we first convert m
 
 Since 1 Lipt = 400 Milliseconds or 2/5 of a Second, hence to find total number of lipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we divide that by (2/5) to get total number of lipts (lipt is a sub unit to pal like second is a sub unit to minute and hence total number of lipts is number of lipts passed in the current pal).
 
-### Number of Vilipts = (((minutes_from_ghadi_start x 60) + current_seconds) mod 24) mod (2 / 5)) / (1 / 150)
+### Number of Vilipts = ((((minutes_from_ghadi_start x 60) + current_seconds) mod 24) mod (2 / 5)) / (1 / 150)
 
 Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total number of vilipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we mod that by (2/5) to get number of seconds passed in the current lipt, then we divide that by (1/150) to get total number of vilipts (vilipt is a sub unit to lipt like millisecond is a sub unit to second and hence total number of vilipts is number of vilipts passed in the current lipt).
 
 These are the formulas derived by me which can convert any Christian System Time to Sanatan System Time.
 
-For eg. if the sun rises at 3:30:00 AM and we are calculating Sanatan System Time at 7:50:20 AM, then:
+For eg. if the sun rises at **3:30:00 AM** and we are calculating Sanatan System Time at **7:50:40 AM**, then:
 
 - sun_rise_hour = 3
 - sun_rise_minutes = 30
 - current_hour = 7
 - current_minutes = 50
-- current_seconds = 20
+- current_seconds = 40
+
+So, according to the whole procedure explained above, first we will calculate number of minutes passed between the sun rise time and the current time.
+
+Now since current_hour is not equal to sun_rise_hour, hence:
+
+**minutes_from_day_start = (60 - 30) + (number_of_hours(3 + 1, 7) x 60) + 50**
+
+Now for number_of_hours(), since 2nd hour is greater than 1st hour, hence:
+
+**hours_difference = 7 - 4 = 3 Hours.**
+
+substituting value of **number_of_hours(3 + 1, 7)** in equation for minutes_from_day_start, we get:
+
+**minutes_from_day_start = (60 - 30) + (3 x 60) + 50 = 30 + 180 + 50 = 260 Minutes**
+
+Now,
+
+- **Number of Ghadis = 260 / 24 = 10 Ghadis (Ignore the decimal part as Ghadi Unit is an integer)**
+
+- **minutes_from_ghadi_start = 260 mod 24 = 20 Minutes**
+
+- **Number of Pals = ((20 x 60) + 40) / 24 = (1200 + 40) / 24 = 1240 / 24 = 51 Pals (Ignore the decimal part as Pal Unit is an integer)**
+
+- **Number of Lipts = (((20 x 60) + 40) mod 24) / (2 / 5) = ((1200 + 40) mod 24) / (2 / 5) = (1240 mod 24) / (2 / 5) = 16 / (2 / 5) = 16 x (5 / 2) = 16 x 2.5 = 40 Lipts**
+
+- **Number of Vilipts = ((((20 x 60) + 40) mod 24) mod (2 / 5)) / (1 / 150) = (((1200 + 40) mod 24) mod (2 / 5)) / (1 / 150) = ((1240 mod 24) mod (2 / 5)) / (1 / 150) = (16 mod (2 / 5)) / (1 / 150) = 0.39 / (1 / 150) = 0.39 * 150 = 59 Vilipts (Ignore the decimal part as Vilipt Unit is an integer)**
 
 ## Installation
 
