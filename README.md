@@ -4,16 +4,19 @@ Java module for converting the currently used Christian System Time to historic 
 
 ## Installation
 
-Simply include the "SanatanTime.jar" file in your project.
+Simply include the **SanatanTime.jar** file in your project.
 
 ### Special Guide For Android Projects:
 
 - Create **libs** folder in your **app** folder where your **app level build.gradle** file is present.
+- Download **SanatanTime.jar** from here, and place it in the **libs** folder created in previous step.
 - In your **app level build.gradle** file, add the following line in **dependencies block**:
 
 ```gradle
 implementation fileTree(dir: "libs", include: ["*.jar"])
 ```
+
+- Done!
 
 ## Usage
 
