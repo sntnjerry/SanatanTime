@@ -116,17 +116,25 @@ Since 1 Ghadi = 24 Minutes, hence to find total number of ghadis we simply divid
 
 This formula gives us the number of minutes passed in the current ghadi.
 
-### Number of Pals = ((minutes_from_ghadi_start x 60) + seconds) / 24
+### Number of Pals = ((minutes_from_ghadi_start x 60) + current_seconds) / 24
 
-Since 1 Pal = 24 Seconds, hence to find total number of pals, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, and then divide that by 24 to get number of pals.
+Since 1 Pal = 24 Seconds, hence to find total number of pals, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, and then divide that by 24 to get number of pals.
 
-### Number of Lipts = (((minutes_from_ghadi_start x 60) + seconds) mod 24) / (2 / 5)
+### Number of Lipts = (((minutes_from_ghadi_start x 60) + current_seconds) mod 24) / (2 / 5)
 
-Since 1 Lipt = 400 Milliseconds or 2/5 of a Second, hence to find total number of lipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we divide that by (2/5) to get total number of lipts (lipt is a sub unit to pal like seconds is a sub unit to minutes and hence total number of lipts is number of lipts passed in the current pal).
+Since 1 Lipt = 400 Milliseconds or 2/5 of a Second, hence to find total number of lipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we divide that by (2/5) to get total number of lipts (lipt is a sub unit to pal like second is a sub unit to minute and hence total number of lipts is number of lipts passed in the current pal).
 
-### Number of Vilipts = (((minutes_from_ghadi_start x 60) + seconds) mod 24) mod (2 / 5)) / (1 / 150)
+### Number of Vilipts = (((minutes_from_ghadi_start x 60) + current_seconds) mod 24) mod (2 / 5)) / (1 / 150)
 
-Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total number of vilipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we mod that by (2/5) to get number of seconds passed in the current lipt, then we divide that by (1/150) to get total number of vilipts (vilipt is a sub unit to lipt like milliseconds is a sub unit to seconds and hence total number of vilipts is number of vilipts passed in the current lipt).
+Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total number of vilipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we mod that by (2/5) to get number of seconds passed in the current lipt, then we divide that by (1/150) to get total number of vilipts (vilipt is a sub unit to lipt like millisecond is a sub unit to second and hence total number of vilipts is number of vilipts passed in the current lipt).
+
+For eg. if we the sun rise at 3:30:00 AM and we are calculating Sanatan System Time at 7:50:20 AM, then:
+
+- sun_rise_hour = 3
+- sun_rise_minutes = 30
+- current_hour = 7
+- current_minutes = 50
+- current_seconds = 20
 
 ## Installation
 
