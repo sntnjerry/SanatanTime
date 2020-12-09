@@ -158,11 +158,26 @@ Now,
 
 - **minutes_from_ghadi_start = 260 mod 24 = 20 Minutes**
 
-- **Number of Pals = ((20 x 60) + 40) / 24 = (1200 + 40) / 24 = 1240 / 24 = 51 Pals (Ignore the decimal part as Pal Unit is an integer)**
+- **Number of Pals = ((20 x 60) + 40) / 24**
+    - = (1200 + 40) / 24 
+    - = 1240 / 24 
+    - = **51 Pals (Ignore the decimal part as Pal Unit is an integer)**
 
-- **Number of Lipts = (((20 x 60) + 40) mod 24) / (2 / 5) = ((1200 + 40) mod 24) / (2 / 5) = (1240 mod 24) / (2 / 5) = 16 / (2 / 5) = 16 x (5 / 2) = 16 x 2.5 = 40 Lipts**
+- **Number of Lipts = (((20 x 60) + 40) mod 24) / (2 / 5)** 
+    - = ((1200 + 40) mod 24) / (2 / 5) 
+    - = (1240 mod 24) / (2 / 5) 
+    - = 16 / (2 / 5) 
+    - = 16 x (5 / 2) 
+    - = 16 x 2.5 
+    - = **40 Lipts**
 
-- **Number of Vilipts = ((((20 x 60) + 40) mod 24) mod (2 / 5)) / (1 / 150) = (((1200 + 40) mod 24) mod (2 / 5)) / (1 / 150) = ((1240 mod 24) mod (2 / 5)) / (1 / 150) = (16 mod (2 / 5)) / (1 / 150) = 0.39 / (1 / 150) = 0.39 * 150 = 59 Vilipts (Ignore the decimal part as Vilipt Unit is an integer)**
+- **Number of Vilipts = ((((20 x 60) + 40) mod 24) mod (2 / 5)) / (1 / 150)**
+    - = (((1200 + 40) mod 24) mod (2 / 5)) / (1 / 150) 
+    - = ((1240 mod 24) mod (2 / 5)) / (1 / 150) 
+    - = (16 mod (2 / 5)) / (1 / 150) 
+    - = 0.39 / (1 / 150) 
+    - = 0.39 * 150 
+    - = **59 Vilipts (Ignore the decimal part as Vilipt Unit is an integer)**
 
 ## Installation
 
