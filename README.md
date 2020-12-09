@@ -106,6 +106,12 @@ So to calculate the number of hours between 2 hours, there are 2 cases which nee
 
     Hence, hours_difference = 24 - (3 - 1) = 24 - 2 = 22 hours.
 
+Now as we have completed our first objective i.e. have calculated the number of minutes passed between the sun rise time and the current time, we are now ready to convert Current System Time into Sanatan System Time with the help of formulas which are listed with their explanation as follows:
+
+- ### Number of Ghadi = minutes_from_day_start / 24
+
+Since 1 Ghadi = 24 Minutes, hence to find total number of ghadi we simply divide number of minutes passed between the sun rise time and the current time by 24.
+
 ## Installation
 
 Simply using Gradle or Maven:
