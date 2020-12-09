@@ -124,7 +124,7 @@ Since 1 Pal = 24 Seconds, hence to find total number of pals, we first convert m
 
 Since 1 Lipt = 400 Milliseconds or 2/5 of a Second, hence to find total number of lipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we divide that by (2/5) to get total number of lipts (lipt is a sub unit to pal like seconds is a sub unit to minutes and hence total number of lipts is number of lipts passed in the current pal).
 
-### Number of Vilipts = (((minutes_from_ghadi_start * 60) + seconds) % 24) % (2 / 5)) / (1 / 150)
+### Number of Vilipts = (((minutes_from_ghadi_start x 60) + seconds) mod 24) mod (2 / 5)) / (1 / 150)
 
 Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total number of vilipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we mod that by (2/5) to get number of seconds passed in the current lipt, then we divide that by (1/150) to get total number of vilipts (vilipt is a sub unit to lipt like milliseconds is a sub unit to seconds and hence total number of vilipts is number of vilipts passed in the current lipt).
 
