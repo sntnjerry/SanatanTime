@@ -108,9 +108,17 @@ So to calculate the number of hours between 2 hours, there are 2 cases which nee
 
 Now as we have completed our first objective i.e. have calculated the number of minutes passed between the sun rise time and the current time, we are now ready to convert Current System Time into Sanatan System Time with the help of formulas which are listed with their explanation as follows:
 
-### Number of Ghadi = minutes_from_day_start / 24
+### Number of Ghadis = minutes_from_day_start / 24
 
-Since 1 Ghadi = 24 Minutes, hence to find total number of ghadi we simply divide number of minutes passed between the sun rise time and the current time by 24.
+Since 1 Ghadi = 24 Minutes, hence to find total number of ghadis we simply divide number of minutes passed between the sun rise time and the current time by 24.
+
+### minutes_from_ghadi_start = minutes_from_day_start % 24
+
+This formula gives us the number of minutes passed in the current ghadi.
+
+### Number of Pals = (((minutes_from_ghadi_start x 60) + seconds) / 24);
+
+Since 1 Pal = 24 Seconds, hence to find total number of pals, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add the number of seconds passed in the current minute, hence getting the number of seconds passed in the current ghadi, and then divide that by 24 to get number of pals.
 
 ## Installation
 
