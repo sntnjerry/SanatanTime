@@ -38,37 +38,17 @@ class YourClass
 ```
 
 ## Parameters
-- ### mode (Optional)
+- ### sun_rise_time (Optional)
   
-  Specifies colour set in which the colours have to vary.
-  
-  - **Parameter Value Type:** String or int[].
-  
-  - **Options for mode parameter**
-    - **"dark":** Varies the colour in dark colours only (useful for dark mode projects).
-    - **"light":** Varies the colour in light colours only (useful for light mode projects).
-    - **[start_rgb, end_rgb]:** Varies the colour from start_rgb value (can be from 0 to 255) to end_rgb value (can be from 0 to 255).
-  
-  - **Default Value:** "" (i.e. varies from 0 to 255 RGB Values).
+  Specifies the time when sun rises.
 
-- ### start (Optional):
-  
-  Specefies colour in RGB format from which colours have to start varying.
-  
-  - **Input type for start parameter:** int[]{R_Value, G_Value, B_Value} (eg. int[]{0, 0, 0} for black).
-  
-  - **Default Value:** int[]{0, 0, 0} (for "dark", none or other mode parameter specified) and int[]{255, 255, 255} (for "light" mode parameter specified).
+  ```java
+  SanatanTime sanatan_time = new SanatanTime(new int[]{sun_rise_hour, sun_rise_minutes});
+  ```
 
-- ### time (Optional):
+  - **Parameter Value Type:** int[].
   
-  Specifies the time in milliseconds after which the colour is changed according to its range.
-  Useful for decreasing the time when using on slow hardware for maintaining the smoothness.
-  
-  - **Parameter Value Type:** int.
-  
-  - **Default Value:** 40 ms (Just perfect for majority hardware types).
-  
-So go ahead and enjoy the beauty of time varying RGB colour sets!
+  - **Default Value:** int[]{3, 30} i.e. 3:30 AM.
 
 ## Concept
 
