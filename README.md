@@ -176,8 +176,12 @@ Now,
     - = ((1240 mod 24) mod (2 / 5)) / (1 / 150) 
     - = (16 mod (2 / 5)) / (1 / 150) 
     - = 0.39 / (1 / 150) 
-    - = 0.39 * 150 
+    - = 0.39 x 150 
     - = **59 Vilipts (Ignore the decimal part as Vilipt Unit is an integer)**
+
+Hence, **7:50:40 AM** (Current System Time) is converted to **10 Ghadi, 51 Pal, 40 Lipt, 59 Vilipt** (Sanatan System Time) using the above explained procedure. So, this is how you can convert any Christian System Time to Sanatan System Time.
+
+Jai Shree Ram!
 
 ## Installation
 
