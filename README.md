@@ -128,7 +128,9 @@ Since 1 Lipt = 400 Milliseconds or 2/5 of a Second, hence to find total number o
 
 Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total number of vilipts, we first convert minutes_from_ghadi_start to seconds by multiplying it with 60, then add current_seconds, hence getting the number of seconds passed in the current ghadi, then we mod that by 24 to get number of seconds passed in the current pal, then we mod that by (2/5) to get number of seconds passed in the current lipt, then we divide that by (1/150) to get total number of vilipts (vilipt is a sub unit to lipt like millisecond is a sub unit to second and hence total number of vilipts is number of vilipts passed in the current lipt).
 
-For eg. if we the sun rise at 3:30:00 AM and we are calculating Sanatan System Time at 7:50:20 AM, then:
+These are the formulas derived by me which can convert any Christian System Time to Sanatan System Time.
+
+For eg. if the sun rises at 3:30:00 AM and we are calculating Sanatan System Time at 7:50:20 AM, then:
 
 - sun_rise_hour = 3
 - sun_rise_minutes = 30
