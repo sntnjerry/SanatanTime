@@ -148,7 +148,6 @@ So, first of all, here is the list of information which we have with us:
 - **current_minutes** = Number of minutes passed in current_hour at the moment when time is being calculated.
 - **actual_current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
 - **current_milliseconds** = Number of milliseconds passed in actual_current_seconds at the moment when time is being calculated.
-
 - **current_seconds = actual_current_seconds + (current_milliseconds / 1000)** (Milliseconds are converted to seconds and added to actual_current_seconds for most precise time conversion).
 
 Now our first objective is to calculate number of minutes passed between the sun rise time and the current time.
@@ -247,13 +246,15 @@ Since 1 Vilipt = 1/150 of a Second or 6.67 Milliseconds, hence to find total num
 
 These are the formulas derived by me which can convert any Christian System Time to Sanatan System Time.
 
-For eg. if the sun rises at **3:30:00 AM** and we are calculating Sanatan System Time at **7:50:40 AM**, then:
+For eg. if the sun rises at **3:30:00 AM** and we are calculating Sanatan System Time at **7:50:40 AM** (Assume milliseconds to be 0 for ease in calculations), then:
 
 - sun_rise_hour = 3
 - sun_rise_minutes = 30
 - current_hour = 7
 - current_minutes = 50
-- current_seconds = 40
+- actual_current_seconds = 40
+- current_milliseconds = 0
+- current_seconds = 40 + (0 / 1000) = 40
 
 So, according to the whole procedure explained above, first we will calculate number of minutes passed between the sun rise time and the current time.
 
