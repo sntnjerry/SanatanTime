@@ -47,7 +47,7 @@ public class SanatanTime
         }
         this.sanatan_time_start = sanatan_time_start;
         Date christian_current_time = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("SSSS");
+        SimpleDateFormat formatter = new SimpleDateFormat("SSS");
         int milliseconds = Integer.parseInt(formatter.format(christian_current_time));
         double seconds = (double)(christian_current_time.getSeconds()) + (double)((double)(milliseconds) / 1000);
         int[] sanatan_converted_time = christian_to_sanatan_time(christian_current_time.getHours(), christian_current_time.getMinutes(), seconds);
@@ -61,7 +61,7 @@ public class SanatanTime
     public SanatanTime()
     {
         Date christian_current_time = new Date();
-        SimpleDateFormat formatter = new SimpleDateFormat("SSSS");
+        SimpleDateFormat formatter = new SimpleDateFormat("SSS");
         int milliseconds = Integer.parseInt(formatter.format(christian_current_time));
         double seconds = (double)(christian_current_time.getSeconds()) + (double)((double)(milliseconds) / 1000);
         int[] sanatan_converted_time = christian_to_sanatan_time(christian_current_time.getHours(), christian_current_time.getMinutes(), seconds);
@@ -105,7 +105,7 @@ public class SanatanTime
     
     public String convert(Date christian_time)
     {
-        SimpleDateFormat formatter = new SimpleDateFormat("SSSS");
+        SimpleDateFormat formatter = new SimpleDateFormat("SSS");
         int milliseconds = Integer.parseInt(formatter.format(christian_time));
         double seconds = (double)(christian_time.getSeconds()) + (double)((double)(milliseconds) / 1000);
         int[] sanatan_converted_time = christian_to_sanatan_time(christian_time.getHours(), christian_time.getMinutes(), seconds);
