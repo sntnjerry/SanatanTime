@@ -50,6 +50,72 @@ class YourClass
   
   - **Default Value:** int[]{3, 30} i.e. 3:30 AM.
 
+## Functions
+- convert(Date date)
+  
+  Converts Current System Date (Date object) into Sanatan System Time.
+
+  ```java
+  String christian_to_sanatan_time = sanatan_time.convert(new Date());
+  System.out.println(christian_to_sanatan_time);
+  ```
+
+  - **Parameter Required:** Date Object.
+  
+  - **Returns:** String representing Sanatan System Time (eg. "%number_of_ghadis% Ghadis, %number_of_pals% Pals, %number_of_lipts% Lipts, %number_of_vilipts% Vilipts").
+
+- toString()
+  
+  Returns String representing the Sanatan Time of that Christian Time when the SanatanTime() constructor was called (exactly like what Date.toString() function does for Christian Time).
+
+  ```java
+  System.out.println(sanatan_time.toString());
+  ```
+
+- getGhadis()
+  
+  Returns number of Ghadis when the SanatanTime() constructor was called (Ghadi is a Sanatan Time System Unit. For more details, you can read the documentation cum explanation of the whole system in the Concept section).
+
+  ```java
+  int ghadis = sanatan_time.getGhadis();
+  System.out.println(Integer.toString(ghadis));
+  ```
+
+  - **Returns:** int representing number of Ghadis.
+
+- getPals()
+  
+  Returns number of Pals when the SanatanTime() constructor was called (Pal is a Sanatan Time System Unit. For more details, you can read the documentation cum explanation of the whole system in the Concept section).
+
+  ```java
+  int pals = sanatan_time.getPals();
+  System.out.println(Integer.toString(pals));
+  ```
+
+  - **Returns:** int representing number of Pals.
+
+- getLipts()
+  
+  Returns number of Lipts when the SanatanTime() constructor was called (Lipt is a Sanatan Time System Unit. For more details, you can read the documentation cum explanation of the whole system in the Concept section).
+
+  ```java
+  int lipts = sanatan_time.getLipts();
+  System.out.println(Integer.toString(lipts));
+  ```
+
+  - **Returns:** int representing number of Lipts.
+
+- getVilipts()
+  
+  Returns number of Vilipts when the SanatanTime() constructor was called (Vilipt is a Sanatan Time System Unit. For more details, you can read the documentation cum explanation of the whole system in the Concept section).
+
+  ```java
+  int vilipts = sanatan_time.getVilipts();
+  System.out.println(Integer.toString(vilipts));
+  ```
+
+  - **Returns:** int representing number of Vilipts.
+
 ## Concept
 
 In the Sanatan Time System, the day starts when the sun rises which happens around 3:30 AM everyday (It may differ by 1 to 2 Hours in different places and weather conditions). The units of the Sanatan Time System and its mathematical relation with the Current Time System Units are given below:
