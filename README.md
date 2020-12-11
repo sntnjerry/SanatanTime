@@ -149,7 +149,7 @@ So, first of all, here is the list of information which we have with us:
 - **actual_current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
 - **current_milliseconds** = Number of milliseconds passed in actual_current_seconds at the moment when time is being calculated.
 
-- **current_seconds = actual_current_seconds + (current_milliseconds / 1000)** (Milliseconds are added for most precise time conversion).
+- **current_seconds = actual_current_seconds + (current_milliseconds / 1000)** (Milliseconds are converted to seconds and added to actual_current_seconds for most precise time conversion).
 
 Now our first objective is to calculate number of minutes passed between the sun rise time and the current time.
 
