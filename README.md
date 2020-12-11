@@ -40,7 +40,7 @@ class YourClass
 ## Parameters
 - ### sun_rise_time (Optional)
   
-  Specifies the time when sun rises.
+  Specifies the time when sun rises as sun rise time plays a crucial role in determining the day start in Sanatan Time System (For more details, you can read the documentation cum explanation of the whole system in the Concept section).
 
   ```java
   SanatanTime sanatan_time = new SanatanTime(new int[]{sun_rise_hour, sun_rise_minutes});
