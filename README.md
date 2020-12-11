@@ -53,7 +53,7 @@ class YourClass
 ## Functions
 - ### convert(Date date)
   
-  Converts Current System Date (Date object) into Sanatan System Time.
+  Converts Current System Time (Date object) into Sanatan System Time.
 
   ```java
   String christian_to_sanatan_time = sanatan_time.convert(new Date());
