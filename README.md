@@ -62,7 +62,7 @@ class YourClass
 
   - **Parameter Required:** Date Object.
   
-  - **Returns:** String representing Sanatan System Time (eg. "%number_of_ghadis% Ghadis, %number_of_pals% Pals, %number_of_lipts% Lipts, %number_of_vilipts% Vilipts").
+  - **Returns:** String representing Sanatan System Time in the format "%number_of_ghadis% Ghadis, %number_of_pals% Pals, %number_of_lipts% Lipts, %number_of_vilipts% Vilipts".
 
 - ### toString()
   
