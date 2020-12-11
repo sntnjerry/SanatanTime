@@ -146,7 +146,10 @@ So, first of all, here is the list of information which we have with us:
 - **sun_rise_minutes** = Number of minutes passed in sun_rise_hour after which the sun rises (Most likely 30 in majority of the world).
 - **current_hour** = The hour in which the time is being calculated.
 - **current_minutes** = Number of minutes passed in current_hour at the moment when time is being calculated.
-- **current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
+- **actual_current_seconds** = Number of seconds passed in current_minutes at the moment when time is being calculated.
+- **current_milliseconds** = Number of milliseconds passed in actual_current_seconds at the moment when time is being calculated.
+
+- **current_seconds = actual_current_seconds + (current_milliseconds / 1000)** (Milliseconds are added for most precise time conversion).
 
 Now our first objective is to calculate number of minutes passed between the sun rise time and the current time.
 
